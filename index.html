@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chanda Mukhiya | Portfolio</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;background:#f7f9fc;color:#111827;line-height:1.65}
+a{text-decoration:none;color:inherit}
+header{position:sticky;top:0;z-index:20;height:72px;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid #e8ebf1;display:flex;align-items:center}
+.nav{width:min(1100px,90%);margin:auto;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:21px;font-weight:700;letter-spacing:-.5px}
+.navlinks{display:flex;gap:28px;font-size:13px;color:#4b5563}
+.navlinks a:hover{color:#3024c9}
+main{width:min(1100px,90%);margin:auto}
+.hero{min-height:calc(100vh - 72px);display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:70px;padding:75px 0}
+.eyebrow,.section-label{color:#3024c9;font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase}
+.hero h1{font-size:clamp(48px,7vw,82px);line-height:1.02;letter-spacing:-4px;margin:13px 0 22px}
+.hero h1 span{color:#3024c9}
+.hero p{max-width:590px;color:#5f6877;font-size:17px}
+.buttons{display:flex;gap:12px;margin-top:30px}
+.btn{padding:12px 20px;border-radius:8px;font-size:14px;font-weight:700;border:1px solid #dfe3ea}
+.btn.primary{color:white;background:#3024c9;border-color:#3024c9}
+.btn.secondary{background:white}
+.btn:hover{transform:translateY(-1px)}
+.profile{background:white;border:1px solid #e6e9ef;border-radius:22px;padding:34px;box-shadow:0 15px 45px rgba(32,40,70,.06)}
+.avatar{width:86px;height:86px;border-radius:50%;background:#3024c9;color:white;display:flex;align-items:center;justify-content:center;font-size:30px;font-weight:700;margin-bottom:25px}
+.profile h2{font-size:24px;margin-bottom:3px}.role{color:#747d8b;margin-bottom:28px}
+.detail{display:flex;justify-content:space-between;gap:20px;padding:16px 0;border-top:1px solid #edf0f4;font-size:14px}
+.detail span{color:#687281;text-align:right}
+section{padding:95px 0}
+.about-intro{max-width:760px;margin-bottom:45px}
+.about-intro h2,.section-head h2{font-size:clamp(36px,5vw,54px);line-height:1.08;letter-spacing:-2px;margin:10px 0 22px}
+.about-intro p,.section-head p{color:#626b78;font-size:17px}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.card{background:white;border:1px solid #e5e9ef;border-radius:18px;padding:30px}
+.card h3{font-size:21px;margin-bottom:14px}.card p{color:#687281;font-size:16px}
+.experience{border-top:1px solid #e7eaf0}
+.section-head{margin-bottom:42px}
+.experience-card{background:white;border:1px solid #e1e5ec;border-left:4px solid #3024c9;border-radius:17px;padding:32px}
+.exp-meta{color:#3024c9;font-size:13px;font-weight:700;letter-spacing:1px;margin-bottom:10px}
+.experience-card h3{font-size:25px;margin-bottom:13px}.experience-card p{color:#667080;max-width:760px}
+.tags{margin-top:22px;display:flex;gap:9px;flex-wrap:wrap}
+.tag{background:#f0f1ff;color:#3024c9;border-radius:30px;padding:7px 13px;font-size:12px;font-weight:700}
+.skills{background:#fff;width:100vw;margin-left:calc(50% - 50vw)}
+.skills-inner{width:min(1100px,90%);margin:auto}
+.skill-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.skill{border:1px solid #e5e9ef;border-radius:17px;padding:27px}
+.skill h3{font-size:20px;margin-bottom:9px}.skill p{color:#687281}
+.languages-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.language{text-align:center;background:white;border:1px solid #e5e9ef;border-radius:18px;padding:40px 20px}
+.language .emoji{font-size:30px;margin-bottom:15px}.language h3{font-size:20px}.language p{color:#7a8390;margin-top:3px}
+.goal{background:#172033;color:white;border-radius:24px;padding:55px;margin:20px 0 90px}
+.goal .section-label{color:#9b94ff}
+.goal h2{font-size:clamp(35px,5vw,52px);line-height:1.12;letter-spacing:-2px;margin:12px 0 22px}
+.goal p{color:#cbd1dc;max-width:720px;font-size:17px}
+footer{border-top:1px solid #e3e7ed;padding:28px 5%;color:#9aa2ae;font-size:14px}
+.footer-inner{width:min(1100px,90%);margin:auto}
+@media(max-width:760px){
+.nav{width:88%}.navlinks{display:none}main{width:88%}
+.hero{grid-template-columns:1fr;gap:42px;padding:58px 0 75px}
+.hero h1{font-size:52px;letter-spacing:-2.5px}.hero p{font-size:16px}
+.profile{padding:28px}section{padding:75px 0}
+.about-intro h2,.section-head h2{font-size:40px}
+.cards,.skill-grid,.languages-grid{grid-template-columns:1fr}
+.goal{padding:34px 28px;border-radius:20px;margin-bottom:70px}.goal h2{font-size:37px}
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="nav">
+<a class="logo" href="#home">Chanda.</a>
+<nav class="navlinks">
+<a href="#about">About</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#languages">Languages</a><a href="#goals">Goals</a>
+</nav>
+</div>
+</header>
+
+<main id="home">
+<section class="hero">
+<div>
+<div class="eyebrow">Business Student • Aspiring Professional</div>
+<h1>Hi, I'm<br><span>Chanda<br>Mukhiya.</span></h1>
+<p>I am a Business student at Dong-A University with one year of accounting experience in Nepal. I enjoy learning new things, developing practical skills, and building my professional future.</p>
+<div class="buttons">
+<a class="btn primary" href="#experience">View Experience</a>
+<a class="btn secondary" href="#goals">My Goals</a>
+</div>
+</div>
+
+<aside class="profile">
+<div class="avatar">CM</div>
+<h2>Chanda Mukhiya</h2>
+<p class="role">Business Student &amp; Aspiring<br>Business Professional</p>
+<div class="detail"><strong>Country</strong><span>Nepal</span></div>
+<div class="detail"><strong>University</strong><span>Dong-A University</span></div>
+<div class="detail"><strong>Field</strong><span>Business</span></div>
+<div class="detail"><strong>Experience</strong><span>1 Year Accounting</span></div>
+<div class="detail"><strong>Korean</strong><span>Learning</span></div>
+</aside>
+</section>
+
+<section id="about">
+<div class="about-intro">
+<div class="section-label">About Me</div>
+<h2>Learning, growing, and preparing for my future.</h2>
+<p>My background in accounting has helped me develop responsibility, organization, and attention to detail. As a Business student, I am continuing to expand my knowledge and gain new experiences.</p>
+</div>
+<div class="cards">
+<div class="card"><h3>🎓 Education</h3><p>I am currently studying Business at Dong-A University in South Korea, where I am developing my understanding of business and management.</p></div>
+<div class="card"><h3>🌱 Personal Strengths</h3><p>I am willing to learn, responsible with my work, and interested in gaining practical experience that can help me grow professionally.</p></div>
+</div>
+</section>
+
+<section class="experience" id="experience">
+<div class="section-head">
+<div class="section-label">Experience</div>
+<h2>My professional<br>experience</h2>
+<p>A practical foundation in accounting and workplace responsibility.</p>
+</div>
+<div class="experience-card">
+<div class="exp-meta">1 YEAR • NEPAL</div>
+<h3>Accountant</h3>
+<p>I worked as an accountant in Nepal for one year. This experience helped me develop organization, accuracy, responsibility, and attention to financial details in a professional environment.</p>
+<div class="tags"><span class="tag">Accounting</span><span class="tag">Organization</span><span class="tag">Attention to Detail</span><span class="tag">Responsibility</span></div>
+</div>
+</section>
+
+<section class="skills" id="skills">
+<div class="skills-inner">
+<div class="section-head">
+<div class="section-label">Skills</div>
+<h2>What I bring to a workplace</h2>
+<p>Skills I have developed through education, experience, and continuous learning.</p>
+</div>
+<div class="skill-grid">
+<div class="skill"><h3>📊 Accounting</h3><p>Experience working in an accounting role and handling work that requires organization and accuracy.</p></div>
+<div class="skill"><h3>🧠 Quick Learner</h3><p>I enjoy learning new tasks and adapting to new environments and responsibilities.</p></div>
+<div class="skill"><h3>🤝 Teamwork</h3><p>I value respectful communication and cooperation with people around me.</p></div>
+<div class="skill"><h3>📚 Continuous Learning</h3><p>I am currently learning Korean while continuing my university studies and professional development.</p></div>
+</div>
+</div>
+</section>
+
+<section id="languages">
+<div class="section-head">
+<div class="section-label">Languages</div>
+<h2>Languages I speak and learn</h2>
+</div>
+<div class="languages-grid">
+<div class="language"><div class="emoji">🇳🇵</div><h3>Nepali</h3><p>Language</p></div>
+<div class="language"><div class="emoji">🌎</div><h3>English</h3><p>Language</p></div>
+<div class="language"><div class="emoji">🗣️</div><h3>Hindi</h3><p>Language</p></div>
+</div>
+</section>
+
+<section id="goals">
+<div class="goal">
+<div class="section-label">My Goals</div>
+<h2>Building a strong<br>future in business.</h2>
+<p>My goal is to continue learning, gain valuable professional experience, and use my business education to build a successful career. I want to keep improving my skills and become a confident business professional.</p>
+</div>
+</section>
+</main>
+
+<footer><div class="footer-inner">© 2026 Chanda Mukhiya. All rights reserved.</div></footer>
+</body>
+</html>
